@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -13,7 +18,40 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             Console.WriteLine("Enter the last number of Fibonacci Sequence of numbers.");
-            int end = int.Parse(Console.ReadLine());
+
+
+            int lst = int.Parse(Console.ReadLine());
+            int i, j, k;
+
+            if (lst <= 0)
+            {
+                Console.WriteLine("0");
+            }
+            else if (lst == 1)
+            {
+                Console.WriteLine("0 1 1");
+            }
+            else
+            {
+                i = 0;
+                Console.WriteLine(i);
+                j = 1;
+                Console.WriteLine(j);
+
+
+                k = i + j;
+                Console.WriteLine(k);
+
+                while (k < lst)
+                {
+                    i = k + j;
+                    if (i <= lst)
+                        Console.WriteLine(i);
+
+                    j = k;
+                    k = i;
+                }
+            }
 
         }
     }

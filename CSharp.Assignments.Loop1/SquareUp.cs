@@ -13,7 +13,21 @@ namespace CSharp.Assignments.Loop1
         /// </summary>
         public static void Main()
         {
-            // Write your codes here
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n - i; j++)
+                {
+                    Console.WriteLine(0);
+                }
+
+                for (int k = i; k > 0; k--)
+                {
+                    Console.WriteLine(k);
+
+                }
+            }
         }
+
     }
 }

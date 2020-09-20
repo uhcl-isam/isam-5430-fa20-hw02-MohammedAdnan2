@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +17,54 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            int i, j, sum = 0;
+            string input, n;
+            int k = 0;
+            input = Console.ReadLine();
+
+            if (input == null)
+            {
+                Console.WriteLine("CNTRLZ has been pressed.");
+                sum = 0;
+            }
+            else
+            {
+                i = Convert.ToInt32(input);
+                while (true)
+                {
+                    n = Console.ReadLine();
+
+                    if (n == null)
+                    {
+                        Console.WriteLine("CNTRLZ has been pressed.");
+
+                        break;
+
+                    }
+                    else
+                    {
+
+                        j = Convert.ToInt32(n);
+
+                        if (i == j)
+                        {
+                            if (k == 0)
+                            {
+                                sum++;
+                                k++;
+                            }
+
+                        }
+                        else
+                        {
+                            k = 0;
+
+                        }
+                        i = j;
+                    }
+                }
+            }
+            Console.WriteLine(sum);
         }
     }
 }
